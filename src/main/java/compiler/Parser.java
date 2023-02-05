@@ -1,6 +1,5 @@
 package compiler;
 
-import ast.ProgramNode;
 import ast.interfaces.ASTNode;
 import gen.BoilerplateParser;
 import gen.BoilerplateParserVisitor;
