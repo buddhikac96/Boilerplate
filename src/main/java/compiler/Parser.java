@@ -11,95 +11,87 @@ import java.util.List;
 
 public class Parser extends AbstractParseTreeVisitor implements BoilerplateParserVisitor {
     @Override
-    public ASTNode visitProgram(BoilerplateParser.ProgramContext ctx) {
-        List<ASTNode> declarations = new ArrayList();
-        for (BoilerplateParser.DeclarationContext declarationContext : ctx.declaration()) {
-            declarations.add(visitDeclaration(declarationContext));
-        }
-        return new ProgramNode(declarations);
-    }
-
-    @Override
-    public ASTNode visitDeclaration(BoilerplateParser.DeclarationContext ctx) {
-        if(ctx.getChild(0) instanceof BoilerplateParser.ClassDeclarationContext){
-            return visitClassDeclaration((BoilerplateParser.ClassDeclarationContext) ctx.getChild(0));
-        } else{
-            return visitInterfaceDeclaration((BoilerplateParser.InterfaceDeclarationContext) ctx.getChild(0));
-        }
-    }
-
-    @Override
-    public ASTNode visitClassDeclaration(BoilerplateParser.ClassDeclarationContext ctx) {
+    public Object visitProgram(BoilerplateParser.ProgramContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitInterfaceDeclaration(BoilerplateParser.InterfaceDeclarationContext ctx) {
+    public Object visitDeclaration(BoilerplateParser.DeclarationContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitFields(BoilerplateParser.FieldsContext ctx) {
+    public Object visitClassDeclaration(BoilerplateParser.ClassDeclarationContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitField(BoilerplateParser.FieldContext ctx) {
+    public Object visitInterfaceDeclaration(BoilerplateParser.InterfaceDeclarationContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitGetSet(BoilerplateParser.GetSetContext ctx) {
+    public Object visitFields(BoilerplateParser.FieldsContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitGet(BoilerplateParser.GetContext ctx) {
+    public Object visitField(BoilerplateParser.FieldContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitSet(BoilerplateParser.SetContext ctx) {
+    public Object visitGetSet(BoilerplateParser.GetSetContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitClassMethods(BoilerplateParser.ClassMethodsContext ctx) {
+    public Object visitGet(BoilerplateParser.GetContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitClassMethod(BoilerplateParser.ClassMethodContext ctx) {
+    public Object visitSet(BoilerplateParser.SetContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitInterfaceMethods(BoilerplateParser.InterfaceMethodsContext ctx) {
+    public Object visitClassMethods(BoilerplateParser.ClassMethodsContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitInterfaceMethod(BoilerplateParser.InterfaceMethodContext ctx) {
+    public Object visitClassMethod(BoilerplateParser.ClassMethodContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitParams(BoilerplateParser.ParamsContext ctx) {
+    public Object visitInterfaceMethods(BoilerplateParser.InterfaceMethodsContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitParam(BoilerplateParser.ParamContext ctx) {
+    public Object visitInterfaceMethod(BoilerplateParser.InterfaceMethodContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitDataType(BoilerplateParser.DataTypeContext ctx) {
+    public Object visitParams(BoilerplateParser.ParamsContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitAccessModifier(BoilerplateParser.AccessModifierContext ctx) {
+    public Object visitParam(BoilerplateParser.ParamContext ctx) {
+        return null;
+    }
+
+    @Override
+    public Object visitDataType(BoilerplateParser.DataTypeContext ctx) {
+        return null;
+    }
+
+    @Override
+    public Object visitAccessModifier(BoilerplateParser.AccessModifierContext ctx) {
         return null;
     }
 }

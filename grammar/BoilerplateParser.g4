@@ -9,16 +9,11 @@ program
     ;
 
 declaration
-    : classDeclaration
-    | interfaceDeclaration
+    : CREATE classType ID WITH fields (INCLUDING methods)? EOL
     ;
 
-classDeclaration
-    : CREATE CLASS ID WITH fields (INCLUDING classMethods)? EOL
-    ;
-
-interfaceDeclaration
-    : CREATE INTERFACE ID WITH fields (INCLUDING interfaceMethods)? EOL
+classType
+    : CLASS | INTERFACE
     ;
 
 fields
@@ -42,20 +37,12 @@ set
     : accessModifier? SET
     ;
 
-classMethods
-    : classMethod (COMMA classMethod)*
+methods
+    : method (COMMA method)*
     ;
 
-classMethod
-    : accessModifier dataType ID LPAREN params? RPAREN
-    ;
-
-interfaceMethods
-    : interfaceMethod (COMMA interfaceMethod)*
-    ;
-
-interfaceMethod
-    : dataType ID LPAREN params? RPAREN
+method
+    : accessModifier? dataType ID LPAREN params? RPAREN
     ;
 
 params
