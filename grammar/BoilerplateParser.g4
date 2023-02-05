@@ -9,7 +9,7 @@ program
     ;
 
 declaration
-    : CREATE classType ID WITH fields (INCLUDING methods)? EOL
+    : CREATE classType ID (WITH fields)? (INCLUDING methods)? EOL
     ;
 
 classType

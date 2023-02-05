@@ -1,5 +1,6 @@
 package compiler;
 
+import ast.ProgramNode;
 import ast.interfaces.ASTNode;
 import gen.BoilerplateParser;
 import gen.BoilerplateParserVisitor;
@@ -17,12 +18,7 @@ public class Parser extends AbstractParseTreeVisitor implements BoilerplateParse
     }
 
     @Override
-    public ASTNode visitClassDeclaration(BoilerplateParser.ClassDeclarationContext ctx) {
-        return null;
-    }
-
-    @Override
-    public ASTNode visitInterfaceDeclaration(BoilerplateParser.InterfaceDeclarationContext ctx) {
+    public ASTNode visitClassType(BoilerplateParser.ClassTypeContext ctx) {
         return null;
     }
 
@@ -52,22 +48,12 @@ public class Parser extends AbstractParseTreeVisitor implements BoilerplateParse
     }
 
     @Override
-    public ASTNode visitClassMethods(BoilerplateParser.ClassMethodsContext ctx) {
+    public ASTNode visitMethods(BoilerplateParser.MethodsContext ctx) {
         return null;
     }
 
     @Override
-    public ASTNode visitClassMethod(BoilerplateParser.ClassMethodContext ctx) {
-        return null;
-    }
-
-    @Override
-    public ASTNode visitInterfaceMethods(BoilerplateParser.InterfaceMethodsContext ctx) {
-        return null;
-    }
-
-    @Override
-    public ASTNode visitInterfaceMethod(BoilerplateParser.InterfaceMethodContext ctx) {
+    public ASTNode visitMethod(BoilerplateParser.MethodContext ctx) {
         return null;
     }
 
