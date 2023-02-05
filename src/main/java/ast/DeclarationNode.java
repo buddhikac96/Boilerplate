@@ -7,6 +7,7 @@ import java.util.List;
 
 public class DeclarationNode implements ast.interfaces.DeclarationNode {
     private ClassType classType;
+    private String className;
     private List<FieldNode> fields;
     private List<MethodNode> methods;
 
@@ -27,6 +28,10 @@ public class DeclarationNode implements ast.interfaces.DeclarationNode {
         return methods;
     }
 
+    public String getClassName() {
+        return className;
+    }
+
     public void setClassType(ClassType classType) {
         this.classType = classType;
     }
@@ -37,6 +42,10 @@ public class DeclarationNode implements ast.interfaces.DeclarationNode {
 
     public void addMethod(MethodNode method) {
         this.methods.add(method);
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
     }
 }
 

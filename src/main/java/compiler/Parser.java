@@ -1,5 +1,6 @@
 package compiler;
 
+import ast.ProgramNode;
 import ast.interfaces.ASTNode;
 import gen.BoilerplateParser;
 import gen.BoilerplateParserVisitor;
@@ -8,7 +9,11 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 public class Parser extends AbstractParseTreeVisitor implements BoilerplateParserVisitor {
     @Override
     public ASTNode visitProgram(BoilerplateParser.ProgramContext ctx) {
-        return null;
+        ProgramNode programNode = new ProgramNode();
+        for(BoilerplateParser.DeclarationContext declarationContext : ctx.declaration()) {
+            programNode.addDeclaration((ASTNode) visitDeclaration(declarationContext));
+        }
+        return programNode;
     }
 
     @Override
