@@ -15,14 +15,7 @@ public class ProgramNode implements ASTNode {
         return declarations;
     }
 
-    public void setDeclarations(List<ASTNode> declarations) {
-        this.declarations = declarations;
-    }
-
-    @Override
-    public String toString() {
-        return "ProgramNode{" +
-                "declarations=" + declarations +
-                '}';
+    public void addDeclaration(ASTNode declaration) {
+        this.declarations.add(declaration);
     }
 }

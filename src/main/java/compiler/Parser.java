@@ -1,13 +1,8 @@
 package compiler;
 
-import ast.interfaces.ASTNode;
-import ast.ProgramNode;
 import gen.BoilerplateParser;
 import gen.BoilerplateParserVisitor;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Parser extends AbstractParseTreeVisitor implements BoilerplateParserVisitor {
     @Override
