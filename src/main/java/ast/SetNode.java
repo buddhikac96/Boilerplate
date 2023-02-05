@@ -6,10 +6,6 @@ import ast.interfaces.ASTNode;
 public class SetNode implements ASTNode {
     private AccessModifier accessModifier;
 
-    public SetNode(AccessModifier accessModifier) {
-        this.accessModifier = accessModifier;
-    }
-
     public AccessModifier getAccessModifier() {
         return accessModifier;
     }

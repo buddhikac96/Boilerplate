@@ -2,13 +2,14 @@ package ast;
 
 import ast.interfaces.ASTNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProgramNode implements ASTNode {
     private List<ASTNode> declarations;
 
-    public ProgramNode(List<ASTNode> declarations) {
-        this.declarations = declarations;
+    public ProgramNode() {
+        this.declarations = new ArrayList<>();
     }
 
     public List<ASTNode> getDeclarations() {

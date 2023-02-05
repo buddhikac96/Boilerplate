@@ -6,11 +6,6 @@ public class ParamNode {
     private String name;
     private DataType type;
 
-    public ParamNode(String name, DataType type) {
-        this.name = name;
-        this.type = type;
-    }
-
     public String getName() {
         return name;
     }

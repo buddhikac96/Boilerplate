@@ -10,8 +10,7 @@ public class DeclarationNode implements ast.interfaces.DeclarationNode {
     private List<FieldNode> fields;
     private List<MethodNode> methods;
 
-    public DeclarationNode(ClassType classType) {
-        this.classType = classType;
+    public DeclarationNode() {
         this.fields = new ArrayList<>();
         this.methods = new ArrayList<>();
     }

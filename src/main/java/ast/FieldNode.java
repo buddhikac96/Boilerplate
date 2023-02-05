@@ -9,13 +9,6 @@ public class FieldNode implements ASTNode {
     private GetNode get;
     private SetNode set;
 
-    public FieldNode(String name, DataType type, GetNode get, SetNode set) {
-        this.name = name;
-        this.type = type;
-        this.get = get;
-        this.set = set;
-    }
-
     public String getName() {
         return name;
     }

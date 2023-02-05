@@ -12,10 +12,7 @@ public class MethodNode {
     private AccessModifier accessModifier;
     private List<ParamNode> params;
 
-    public MethodNode(String name, DataType returnType, AccessModifier accessModifier) {
-        this.name = name;
-        this.returnType = returnType;
-        this.accessModifier = accessModifier;
+    public MethodNode() {
         this.params = new ArrayList<>();
     }
 
